@@ -4,7 +4,7 @@
   "description": "A simple bunch of examples used as an overview about ES6 (ECMAScript 2015)",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -L",
+    "start": "nodemon",
     "lint": "eslint"
   },
   "repository": {
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/Especializa/es6#readme",
   "devDependencies": {
     "eslint": "^3.14.0",
+    "jshint": "^2.9.5",
     "nodemon": "^1.11.0"
   }
 }

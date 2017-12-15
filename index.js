@@ -3,6 +3,7 @@ class Message{
 	constructor(){
 		this.text = '';
 		this.created = Date.now();
+		this.__trs = "";
 	}
 
 }
