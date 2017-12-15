@@ -4,7 +4,7 @@
   "description": "A simple bunch of examples used as an overview about ES6 (ECMAScript 2015)",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
+    "start": "nodemon -L",
     "lint": "eslint"
   },
   "repository": {
