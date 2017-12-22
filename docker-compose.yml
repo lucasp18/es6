@@ -1,0 +1,9 @@
+version: "3"
+
+services:         
+    tns:
+        image: niccolomeloni/docker-nativescript-cli
+        volumes:            
+            - .:/tns
+        privileged: true        
+        command: npm start
