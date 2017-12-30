@@ -6,4 +6,5 @@ services:
         volumes:            
             - .:/tns
         privileged: true        
-        command: npm start
+        
+        command: npm run serve
