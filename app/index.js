@@ -1,4 +1,5 @@
 import Message from './model/message.model';
+import template from './messages.html';
 
 console.log('Index started');
 console.dir(new Message());
@@ -7,7 +8,8 @@ console.dir(new Message());
 document.getElementById('send').onclick = () => {
   const m = new Message(document.getElementById('message').value);
   document.getElementById('messages').innerHTML +=
-    `<li>${m.text} ${m.created}</li>`;
+   	template(m);
+   // `<li>${m.text} ${m.created}</li>`;
 };
 
 if (module && module.hot) {

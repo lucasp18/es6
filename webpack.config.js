@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   entry: './app/index.js',
@@ -8,6 +9,19 @@ const config = {
     filename: 'bundle.js',
     publicPath: '/',
   },
+  plugins: [
+  	new HtmlWebpackPlugin({
+  		template: path.join(__dirname, 'app', 'index.html')
+  	}),
+  ],
+  module: {
+  	loaders: [
+  		{
+  		loader: 'html-es6-template-loader',
+  		test: /\.html$/
+  		},
+  	]
+  }
 };
 
 if (process.env.NODE_ENV === 'development') {
@@ -18,9 +32,7 @@ if (process.env.NODE_ENV === 'development') {
   config.devServer = {
     hot: true,
   };
-  config.plugins = [
-    new webpack.HotModuleReplacementPlugin(),
-  ];
+  config.plugins.push(new webpack.HotModuleReplacementPlugin());
 }
 
 module.exports = config;

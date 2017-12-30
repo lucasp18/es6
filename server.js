@@ -17,7 +17,8 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  console.log('testee');
+  res.sendFile(path.join(__dirname, 'app', 'index.html'));
 });
 
 
